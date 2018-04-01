@@ -149,8 +149,7 @@ with tf.Session() as sess:
     for i in range(num_epoche):
         acc_esec = 0.
         num_batch = int(dati.train.num_examples/dim_batch)
-		
-		# operazioni da eseguite su sotto-insiemi del train-set (batch)
+	
         for j in range(num_batch):
             x_batch, y_batch = dati.train.next_batch(dim_batch)
             fd = {x: x_batch, y: y_batch}
